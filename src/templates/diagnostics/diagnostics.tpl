@@ -23,6 +23,7 @@
         <br />
         <button name="prepare" type="submit">{{ trans("Generate") }}</button>
     </form>
+    %if diagnostics:
     <h2>{{ trans("Prepared diagnostics") }}</h2>
     <table>
         <thead>
@@ -56,4 +57,5 @@
             %end
         </tbody>
     </table>
+    %end
 </div>
