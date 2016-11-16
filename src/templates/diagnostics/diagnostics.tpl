@@ -24,7 +24,7 @@
         <button name="prepare" type="submit">{{ trans("Generate") }}</button>
     </form>
     %if diagnostics:
-    <h2>{{ trans("Prepared diagnostics") }}</h2>
+    <h2>{{ trans("List diagnostics") }}</h2>
     <table>
         <thead>
             <tr>
@@ -48,10 +48,12 @@
                     %end
                 </td>
                 <td>
+                    %if diagnostic.status == "ready":
                     <form method='post' action="{{ url("config_action", page_name="diagnostics", action="remove") }}">
                         <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
                         <button name="id" value="{{ diagnostic.diag_id }}" type="submit">{{ trans("Remove") }}
                     </form>
+                    %end
                 </td>
             </tr>
             %end
