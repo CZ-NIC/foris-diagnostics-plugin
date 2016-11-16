@@ -1,0 +1,96 @@
+# Foris - web administration interface for OpenWrt based on NETCONF
+# Copyright (C) 2016 CZ.NIC, z.s.p.o. <http://www.nic.cz>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Stepan Henek <stepan.henek@nic.cz>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris Diagnostics plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-16 16:18+0100\n"
+"PO-Revision-Date: 2016-11-16 16:18+0100\n"
+"Last-Translator: Stepan Henek<stepan.henek@nic.cz>\n"
+"Language-Team: Czech <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Diagnostics"
+msgstr "Diagnostiky"
+
+msgid "Modules"
+msgstr "Moduly"
+
+msgid "Missing"
+msgstr "Chybí"
+
+msgid "Preparing"
+msgstr "Se připravuje"
+
+msgid "Ready"
+msgstr "Připraven"
+
+msgid "Unknown"
+msgstr "Neznámý"
+
+#, python-format
+msgid "Unable to get diagnostic \"%s\"."
+msgstr "Nemůžu stáhnout diagnostiku \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" removed."
+msgstr "Diagnostika \"%s\" byla odstraněna."
+
+#, python-format
+msgid "Unable to remove diagnostic \"%s\"."
+msgstr "Nemůžu odstranit diagnostiku \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" is being prepared."
+msgstr "Diagnostika \"%s\" se připravuje."
+
+msgid "Failed to generate diagnostic."
+msgstr "Generování diagnostiky selhalo"
+
+msgid ""
+"This page is dedicated to create diagnotics which can be useful to us to "
+"debug some problems related to the router's functionality. "
+msgstr ""
+"Tato stránka slouží pro vytváření diagnostických výstupů, které nám pomohou "
+"ladit problémy, které můžou s routerem nastat. "
+
+msgid "Prepare diagnostics"
+msgstr "Připrav diagnostiku"
+
+msgid "Generate"
+msgstr "Generuj"
+
+msgid "List diagnostics"
+msgstr "Seznam diagnostik"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "status"
+
+msgid "Download"
+msgstr "Stáhni"
+
+msgid "Remove"
+msgstr "Odstraň"
