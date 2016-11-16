@@ -129,7 +129,7 @@ class DiagnosticsPlugin(ForisPlugin):
     PLUGIN_NAME = "diagnostics"
     DIRNAME = os.path.dirname(os.path.abspath(__file__))
     PLUGIN_STYLES = [
-        "css/screen.css",
+        "css/diagnostics.css",
     ]
 
     def __init__(self, app):
