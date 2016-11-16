@@ -46,3 +46,11 @@ def remove_diagnostic(diag_id):
         return True
     except (RPCError, TimeoutExpiredError):
         return False
+
+
+def prepare_diagnostic(modules):
+    try:
+        data = dispatch(diagnostics.Prepare.rpc_prepare(modules))
+        return diagnostics.Prepare.from_element(ET.fromstring(data.xml)).diag_id
+    except (RPCError, TimeoutExpiredError):
+        return None

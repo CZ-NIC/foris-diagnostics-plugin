@@ -9,12 +9,20 @@
 
 <div id="page-plugin-diagnostics" class="config-page">
     %include("_messages.tpl")
-    <h2>{{ trans("Available modules") }}</h2>
-    <ul>
-        %for module in modules:
-        <li>{{ module }}</li>
+    <p>{{ description }}</p>
+    <h2>{{ trans("Prepare diagnostics") }}</h2>
+    <form method='post' action='{{ url("config_action", page_name="diagnostics", action="prepare") }}'>
+        <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
+        %for section in form.sections:
+            %if section.active_fields:
+                %for field in section.active_fields:
+                    %include("_field.tpl", field=field)
+                %end
+            %end
         %end
-    </ul>
+        <br />
+        <button name="prepare" type="submit">{{ trans("Generate") }}</button>
+    </form>
     <h2>{{ trans("Prepared diagnostics") }}</h2>
     <table>
         <thead>

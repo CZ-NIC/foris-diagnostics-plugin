@@ -9,23 +9,38 @@ import bottle
 import os
 
 
+from foris import fapi
 from foris.core import gettext_dummy as gettext, ugettext as _
 from foris.config import ConfigPageMixin, add_config_page
 from foris.config_handlers import BaseConfigHandler
+from foris.form import Checkbox
 from foris.plugins import ForisPlugin
 from foris.utils import messages
 from foris.utils.routing import reverse
 
-from .nuci import get_diagnostics, get_diagnostics_modules, get_diagnostic, remove_diagnostic
+from .nuci import (
+    get_diagnostics, get_diagnostics_modules, get_diagnostic, remove_diagnostic,
+    prepare_diagnostic
+)
 
 
 class DiagnosticsConfigHandler(BaseConfigHandler):
-    pass
+    userfriendly_title = gettext("Diagnostics")
+
+    def get_form(self):
+        modules_form = fapi.ForisForm("modules", self.data)
+        modules_section = modules_form.add_section(name="modules", title=_("Modules"))
+        modules_list = get_diagnostics_modules().module_list
+        for module in modules_list:
+            modules_section.add_field(
+                Checkbox, name="module_%s" % module, label=module, default=True,
+            )
+
+        return modules_form
 
 
 class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
     template = "diagnostics/diagnostics.tpl"
-    userfriendly_title = gettext("Diagnostics")
 
     DIAGNOSTIC_STATUS_TRANSLATION = {
         'missing': gettext("Missing"),
@@ -66,6 +81,20 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
 
         bottle.redirect(reverse("config_page", page_name="diagnostics"))
 
+    def _action_prepare_diagnostic(self):
+        modules = [
+            k.replace("module_", "", 1) for k, v in bottle.request.POST.allitems()
+            if v == "1" and k.startswith("module_")
+        ]
+
+        diag_id = prepare_diagnostic(modules)
+        if diag_id:
+            messages.success(_("Diagnostic \"%s\" is being prepared.") % diag_id)
+        else:
+            messages.error(_("Failed to generate diagnostic."))
+
+        bottle.redirect(reverse("config_page", page_name="diagnostics"))
+
     def call_action(self, action):
         if bottle.request.method != 'POST':
             # all actions here require POST
@@ -75,6 +104,8 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             return self._action_download_diagnostic()
         elif action == "remove":
             return self._action_remove_diagnostic()
+        elif action == "prepare":
+            return self._action_prepare_diagnostic()
         raise bottle.HTTPError(404, "Unknown action.")
 
     def render(self, **kwargs):
@@ -84,8 +115,14 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         kwargs['modules'] = get_diagnostics_modules().module_list
         kwargs['diagnostics'] = get_diagnostics().list
         kwargs['translate_diagnostic_status'] = self.translate_diagnostic_status
+        kwargs['form'] = self.form
+        kwargs['title'] = self.userfriendly_title
+        kwargs['description'] = _(
+            "This page is dedicated to create diagnotics which can be useful to us to "
+            "debug some problems related to the router's functionality. "
+        )
 
-        return super(DiagnosticsConfigPage, self).render(**kwargs)
+        return self.default_template(**kwargs)
 
 
 class DiagnosticsPlugin(ForisPlugin):

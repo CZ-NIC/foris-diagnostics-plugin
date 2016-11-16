@@ -61,7 +61,7 @@ class List(YinElement):
 
     @staticmethod
     def rpc_list_diagnostics():
-        get_tag = Modules.qual_tag(List.tag)
+        get_tag = List.qual_tag(List.tag)
         return ET.Element(get_tag)
 
     @property
@@ -95,7 +95,7 @@ class Show(YinElement):
 
     @staticmethod
     def rpc_get(diag_id):
-        get_tag = Modules.qual_tag(Show.tag)
+        get_tag = Show.qual_tag(Show.tag)
 
         element = ET.Element(get_tag)
         id_tag = Show.qual_tag("diag-id")
@@ -126,14 +126,41 @@ class Remove(YinElement):
 
     @staticmethod
     def rpc_remove(diag_id):
-        get_tag = Modules.qual_tag(Remove.tag)
+        remove_tag = Remove.qual_tag(Remove.tag)
 
-        element = ET.Element(get_tag)
+        element = ET.Element(remove_tag)
         id_tag = Remove.qual_tag("diag-id")
         id_elem = ET.SubElement(element, id_tag)
         id_elem.text = diag_id
 
         return element
+
+
+class Prepare(YinElement):
+    tag = "prepare"
+    NS_URI = DIAGNOSTICS_URI
+
+    def __init__(self, diag_id):
+        super(Prepare, self).__init__()
+        self.diag_id = diag_id
+
+    @staticmethod
+    def rpc_prepare(modules):
+        prepare_tag = Prepare.qual_tag(Prepare.tag)
+        element = ET.Element(prepare_tag)
+
+        for module in modules:
+            module_tag = Remove.qual_tag("module")
+            module_elem = ET.SubElement(element, module_tag)
+            module_elem.text = module
+
+        return element
+
+    @staticmethod
+    def from_element(element):
+        diagnostics_node = element.find(Show.qual_tag("diagnostics"))
+        diag_id = diagnostics_node.find(Show.qual_tag("diag-id")).text
+        return Prepare(diag_id)
 
 ####################################################################################################
 ET.register_namespace("diagnostics", DIAGNOSTICS_URI)
