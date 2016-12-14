@@ -13,13 +13,34 @@
     <h2>{{ trans("Prepare diagnostics") }}</h2>
     <form method='post' action='{{ url("config_action", page_name="diagnostics", action="prepare") }}'>
         <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
+        <table>
+            <tbody>
         %for section in form.sections:
             %if section.active_fields:
                 %for field in section.active_fields:
-                    %include("_field.tpl", field=field)
+                    <tr>
+                        <td>
+                            {{! field.render() }}
+                            %if field.errors:
+                              <div class="server-validation-container">
+                                <ul>
+                                  <li>{{ field.errors }}</li>
+                                </ul>
+                              </div>
+                            %end
+                        </td>
+                        <td>
+                            {{! field.label_tag }}
+                            %if field.hint:
+                                <img class="field-hint" src="{{ static("img/icon-help.png") }}" title="{{ field.hint }}" alt="{{ trans("Hint") }}: {{ field.hint }}">
+                            %end
+                        </td>
+                    </tr>
                 %end
             %end
         %end
+            </tbody>
+        </table>
         <br />
         <button name="prepare" type="submit">{{ trans("Generate") }}</button>
     </form>
