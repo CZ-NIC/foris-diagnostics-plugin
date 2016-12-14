@@ -10,7 +10,7 @@
 <div id="page-plugin-diagnostics" class="config-page">
     %include("_messages.tpl")
     <p>{{ description }}</p>
-    <h2>{{ trans("Prepare diagnostics") }}</h2>
+    <h2>{{ trans("Modules") }}</h2>
     <form method='post' action='{{ url("config_action", page_name="diagnostics", action="prepare") }}'>
         <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
         <table>
@@ -45,7 +45,8 @@
         <button name="prepare" type="submit">{{ trans("Generate") }}</button>
     </form>
     %if diagnostics:
-    <h2>{{ trans("List diagnostics") }}</h2>
+    <h2>{{ trans("List") }}</h2>
+    <p><strong>{{ trans("Some of the diagnostics might contain a sensitive data so make sure to remove it before sharing.") }}</strong></p>
     <table class='diagnostics-list'>
         <thead>
             <tr>
@@ -86,5 +87,7 @@
             %end
         </tbody>
     </table>
+    <br />
+    <p>{{ trans("Note that this list is not presistent and will be removed after reboot.") }}</p>
     %end
 </div>
