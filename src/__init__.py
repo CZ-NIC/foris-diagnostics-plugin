@@ -40,6 +40,7 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
 
 
 class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
+    menu_order = 90
     template = "diagnostics/diagnostics.tpl"
 
     DIAGNOSTIC_STATUS_TRANSLATION = {
