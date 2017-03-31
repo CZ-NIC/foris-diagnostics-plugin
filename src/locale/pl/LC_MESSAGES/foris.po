@@ -55,7 +55,7 @@ msgid "Diagnostic \"%s\" is being prepared."
 msgstr "Informacje diagnostyczne \"%s\" są przygotowywane."
 
 msgid "Failed to generate diagnostic."
-msgstr "Nie udało się wygenerować danych diagnostycznych."
+msgstr "Nie udało się wygenerować informacji diagnostycznych."
 
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
