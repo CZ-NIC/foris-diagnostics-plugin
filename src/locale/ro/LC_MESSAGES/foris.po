@@ -8,81 +8,91 @@ msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:16+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-04-09 16:13+0000\n"
+"Last-Translator: Sergiu Cozma <lssjbrolli@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnoze"
 
 msgid "Modules"
-msgstr ""
+msgstr "Module"
 
 msgid "Missing"
-msgstr ""
+msgstr "Lipsesc"
 
 msgid "Preparing"
-msgstr ""
+msgstr "Pregatesc"
 
 msgid "Ready"
-msgstr ""
+msgstr "Disponibil"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Necunoscut"
 
 #, python-format
 msgid "Unable to get diagnostic \"%s\"."
-msgstr ""
+msgstr "Nu s-a putut obtine diagnoza \"%s\"."
 
 #, python-format
 msgid "Diagnostic \"%s\" removed."
-msgstr ""
+msgstr "Diagnosticul \"%s\" sters."
 
 #, python-format
 msgid "Unable to remove diagnostic \"%s\"."
-msgstr ""
+msgstr "Nu s-a putut sterge diagnosticul \"%s\"."
 
 #, python-format
 msgid "Diagnostic \"%s\" is being prepared."
-msgstr ""
+msgstr "Diagnosticul \"%s\" este in curs de pregatire."
 
 msgid "Failed to generate diagnostic."
-msgstr ""
+msgstr "Eroare la generarea diagnosticului."
 
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
 "debug some problems related to the router's functionality. "
 msgstr ""
+"Aceasta pagina este didicata crearii de diagnoze care pot fi folositoare "
+"pentru noi in rezolvarea unor probleme legate de functionarea router-ului. "
 
 msgid "Hint"
-msgstr ""
+msgstr "Sugestie"
 
 msgid "Generate"
-msgstr ""
+msgstr "Genereaza"
 
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 msgid ""
 "Some of the diagnostics might contain a sensitive data so make sure to "
 "remove it before sharing."
 msgstr ""
+"Cateva dintre diagnostice pot contine informatii sensibile, fiti siguri ca "
+"le-ati sters inainte de trimitere."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "status"
-msgstr ""
+msgstr "status"
 
 msgid "Download"
-msgstr ""
+msgstr "Descarcare"
 
 msgid "Remove"
-msgstr ""
+msgstr "Stergere"
 
 msgid "Note that this list is not presistent and will be removed after reboot."
 msgstr ""
+"Retineti ca aceasta lista nu este persistenta si va fi stearsa dupa "
+"repornire."
