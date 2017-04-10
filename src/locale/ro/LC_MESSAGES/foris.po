@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris Diagnostics plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-02 13:16+0100\n"
+"PO-Revision-Date: 2017-04-09 16:15+0000\n"
+"Last-Translator: Sergiu Cozma <lssjbrolli@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
+
+msgid "Diagnostics"
+msgstr "Diagnoze"
+
+msgid "Modules"
+msgstr "Module"
+
+msgid "Missing"
+msgstr "Lipsesc"
+
+msgid "Preparing"
+msgstr "Pregatesc"
+
+msgid "Ready"
+msgstr "Disponibil"
+
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#, python-format
+msgid "Unable to get diagnostic \"%s\"."
+msgstr "Nu s-a putut obtine diagnoza \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" removed."
+msgstr "Diagnosticul \"%s\" sters."
+
+#, python-format
+msgid "Unable to remove diagnostic \"%s\"."
+msgstr "Nu s-a putut sterge diagnosticul \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" is being prepared."
+msgstr "Diagnosticul \"%s\" este in curs de pregatire."
+
+msgid "Failed to generate diagnostic."
+msgstr "Diagnosticul nu a fost generat."
+
+msgid ""
+"This page is dedicated to create diagnotics which can be useful to us to "
+"debug some problems related to the router's functionality. "
+msgstr ""
+"Aceasta pagina este didicata crearii de diagnoze care pot fi folositoare "
+"pentru noi in rezolvarea unor probleme legate de functionarea router-ului. "
+
+msgid "Hint"
+msgstr "Sugestie"
+
+msgid "Generate"
+msgstr "Genereaza"
+
+msgid "List"
+msgstr "Lista"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Cateva dintre diagnostice pot contine informatii sensibile, fiti siguri ca "
+"le-ati sters inainte de trimitere."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "status"
+
+msgid "Download"
+msgstr "Descarcare"
+
+msgid "Remove"
+msgstr "Sterge"
+
+msgid "Note that this list is not presistent and will be removed after reboot."
+msgstr ""
+"Retineti ca aceasta lista nu este persistenta si va fi stearsa dupa "
+"repornire."
