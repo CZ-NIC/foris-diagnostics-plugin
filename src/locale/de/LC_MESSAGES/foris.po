@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Foris Diagnostics plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris Diagnostics plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"PO-Revision-Date: 2017-04-11 11:20+0000\n"
+"Last-Translator: NoR nIc <nora.cznic@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
+
+msgid "Diagnostics"
+msgstr "Diagnostik"
+
+msgid "Modules"
+msgstr "Module"
+
+msgid "Missing"
+msgstr "Fehlende"
+
+msgid "Preparing"
+msgstr "Vorbereitet"
+
+msgid "Ready"
+msgstr "Fertig"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#, python-format
+msgid "Unable to get diagnostic \"%s\"."
+msgstr "Kann kiene Diagnostikdatei nicht \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" removed."
+msgstr "Diagnostik \"%s\" entfernt."
+
+#, python-format
+msgid "Unable to remove diagnostic \"%s\"."
+msgstr "Diagnostik kann nicht entfernt werden \"%s\"."
+
+#, python-format
+msgid "Diagnostic \"%s\" is being prepared."
+msgstr "Diagnostik \"%s\" wird vorbereitet."
+
+msgid "Failed to generate diagnostic."
+msgstr "Fehler beim Generieren der Diagnostik."
+
+msgid ""
+"This page is dedicated to create diagnotics which can be useful to us to "
+"debug some problems related to the router's functionality. "
+msgstr ""
+"Diese Seite ist dazu gedacht, eine Diagnostikdatei zu erstellen, die für uns "
+"nützlich sein kann, um einige Probleme im Zusammenhang mit der "
+"Funktionalität des Routers zu debuggen. "
+
+msgid "Hint"
+msgstr "Hilfe"
+
+msgid "Generate"
+msgstr "Generieren"
+
+msgid "List"
+msgstr "Liste"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Einige der Diagnostikdaten können eine sensible Daten enthalten, stellen Sie "
+"sicher, dass Sie diese vor dem Freigeben entfernen."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "Status"
+
+msgid "Download"
+msgstr "Herunterladen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Note that this list is not presistent and will be removed after reboot."
+msgstr ""
+"Beachten Sie, dass diese Liste nicht persistent ist und nach einem Neustart "
+"entfernt wird."
