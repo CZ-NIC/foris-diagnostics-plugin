@@ -6,7 +6,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import bottle
+import io
 import os
+import re
+import gzip
 
 
 from foris import fapi
@@ -18,10 +21,7 @@ from foris.plugins import ForisPlugin
 from foris.utils import messages
 from foris.utils.routing import reverse
 
-from .nuci import (
-    get_diagnostics, get_diagnostics_modules, get_diagnostic, remove_diagnostic,
-    prepare_diagnostic
-)
+from foris.state import current_state
 
 
 class DiagnosticsConfigHandler(BaseConfigHandler):
@@ -30,8 +30,8 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
     def get_form(self):
         modules_form = fapi.ForisForm("modules", self.data)
         modules_section = modules_form.add_section(name="modules", title=_("Modules"))
-        modules_list = get_diagnostics_modules().module_list
-        for module in modules_list:
+        data = current_state.backend_instance.send("diagnostics", "list_modules", {})
+        for module in data["modules"]:
             modules_section.add_field(
                 Checkbox, name="module_%s" % module, label=module, default=True,
             )
@@ -60,22 +60,46 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
 
     def _action_download_diagnostic(self):
         diag_id = bottle.request.POST.get("id")
-        output = get_diagnostic(diag_id).output
 
-        if not output:
+        def _error_redirect():
             messages.error(_("Unable to get diagnostic \"%s\".") % diag_id)
             bottle.redirect(reverse("config_page", page_name="diagnostics"))
-        else:
-            bottle.response.set_header("Content-Type", "text/plain")
-            bottle.response.set_header(
-                "Content-Disposition", 'attachment; filename="%s.txt.gz' % diag_id)
-            bottle.response.set_header("Content-Length", len(output))
-            return output
+
+        if not re.match(r'^[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-zA-Z0-9]{8}$', diag_id):
+            _error_redirect()
+            return
+
+        try:
+            data = current_state.backend_instance.send("diagnostics", "list_diagnostics", {})
+            diagnostics = [e for e in data["diagnostics"] if e["diag_id"] == diag_id]
+            filename = '%s.txt.gz' % diag_id
+            if len(diagnostics) != 1:
+                _error_redirect()
+                return
+            with open(diagnostics[0]["path"]) as f_in:
+                buf = io.BytesIO()
+                f_out = gzip.GzipFile(filename=filename, mode="wb", fileobj=buf)
+                f_out.write(f_in.read())
+                f_out.flush()
+                f_out.close()
+                buf.seek(0)
+                output = buf.read()
+        except IOError:
+            _error_redirect()
+            return
+
+        bottle.response.set_header("Content-Type", "text/plain")
+        bottle.response.set_header(
+            "Content-Disposition", 'attachment; filename="%s"' % filename)
+        bottle.response.set_header("Content-Length", len(output))
+        return output
 
     def _action_remove_diagnostic(self):
         diag_id = bottle.request.POST.get("id")
 
-        if remove_diagnostic(diag_id):
+        data = current_state.backend_instance.send(
+            "diagnostics", "remove_diagnostic", {"diag_id": diag_id})
+        if data["result"]:
             messages.success(_("Diagnostic \"%s\" removed.") % diag_id)
         else:
             messages.error(_("Unable to remove diagnostic \"%s\".") % diag_id)
@@ -88,9 +112,10 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             if v == "1" and k.startswith("module_")
         ]
 
-        diag_id = prepare_diagnostic(modules)
-        if diag_id:
-            messages.success(_("Diagnostic \"%s\" is being prepared.") % diag_id)
+        data = current_state.backend_instance.send(
+            "diagnostics", "prepare_diagnostic", {"modules": modules})
+        if "diag_id" in data:
+            messages.success(_("Diagnostic \"%s\" is being prepared.") % data["diag_id"])
         else:
             messages.error(_("Failed to generate diagnostic."))
 
@@ -113,8 +138,8 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         kwargs['PLUGIN_NAME'] = DiagnosticsPlugin.PLUGIN_NAME
         kwargs['PLUGIN_STYLES'] = DiagnosticsPlugin.PLUGIN_STYLES
 
-        kwargs['modules'] = get_diagnostics_modules().module_list
-        kwargs['diagnostics'] = get_diagnostics().list
+        data = current_state.backend_instance.send("diagnostics", "list_diagnostics", {})
+        kwargs['diagnostics'] = data["diagnostics"]
         kwargs['translate_diagnostic_status'] = self.translate_diagnostic_status
         kwargs['form'] = self.form
         kwargs['title'] = self.userfriendly_title

@@ -59,23 +59,23 @@
         <tbody>
             %for diagnostic in diagnostics:
             <tr>
-                <td>{{ diagnostic.diag_id }}</td>
-                <td>{{ translate_diagnostic_status(diagnostic.status) }}</td>
+                <td>{{ diagnostic["diag_id"] }}</td>
+                <td>{{ translate_diagnostic_status(diagnostic["status"]) }}</td>
                 <td>
-                    %if diagnostic.status == "ready":
+                    %if diagnostic["status"] == "ready":
                     <table>
                         <tbody>
                             <tr>
                                 <td>
                                     <form method='post' action="{{ url("config_action", page_name="diagnostics", action="download") }}">
                                         <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
-                                        <button name="id" value="{{ diagnostic.diag_id }}" type="submit">{{ trans("Download") }}
+                                        <button name="id" value="{{ diagnostic["diag_id"] }}" type="submit">{{ trans("Download") }}
                                     </form>
                                 </td>
                                 <td>
                                     <form method='post' action="{{ url("config_action", page_name="diagnostics", action="remove") }}">
                                         <input type="hidden" name="csrf_token" value="{{ get_csrf_token() }}">
-                                        <button name="id" value="{{ diagnostic.diag_id }}" type="submit">{{ trans("Remove") }}
+                                        <button name="id" value="{{ diagnostic["diag_id"] }}" type="submit">{{ trans("Remove") }}
                                     </form>
                                 </td>
                             </tr>
