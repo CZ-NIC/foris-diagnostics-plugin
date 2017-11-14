@@ -30,7 +30,7 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
     def get_form(self):
         modules_form = fapi.ForisForm("modules", self.data)
         modules_section = modules_form.add_section(name="modules", title=_("Modules"))
-        data = current_state.backend_instance.send("diagnostics", "list_modules", {})
+        data = current_state.backend.perform("diagnostics", "list_modules", {})
         for module in data["modules"]:
             modules_section.add_field(
                 Checkbox, name="module_%s" % module, label=module, default=True,
@@ -70,7 +70,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             return
 
         try:
-            data = current_state.backend_instance.send("diagnostics", "list_diagnostics", {})
+            data = current_state.backend.perform("diagnostics", "list_diagnostics", {})
             diagnostics = [e for e in data["diagnostics"] if e["diag_id"] == diag_id]
             filename = '%s.txt.gz' % diag_id
             if len(diagnostics) != 1:
@@ -97,7 +97,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
     def _action_remove_diagnostic(self):
         diag_id = bottle.request.POST.get("id")
 
-        data = current_state.backend_instance.send(
+        data = current_state.backend.perform(
             "diagnostics", "remove_diagnostic", {"diag_id": diag_id})
         if data["result"]:
             messages.success(_("Diagnostic \"%s\" removed.") % diag_id)
@@ -112,7 +112,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             if v == "1" and k.startswith("module_")
         ]
 
-        data = current_state.backend_instance.send(
+        data = current_state.backend.perform(
             "diagnostics", "prepare_diagnostic", {"modules": modules})
         if "diag_id" in data:
             messages.success(_("Diagnostic \"%s\" is being prepared.") % data["diag_id"])
@@ -138,7 +138,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         kwargs['PLUGIN_NAME'] = DiagnosticsPlugin.PLUGIN_NAME
         kwargs['PLUGIN_STYLES'] = DiagnosticsPlugin.PLUGIN_STYLES
 
-        data = current_state.backend_instance.send("diagnostics", "list_diagnostics", {})
+        data = current_state.backend.perform("diagnostics", "list_diagnostics", {})
         kwargs['diagnostics'] = data["diagnostics"]
         kwargs['translate_diagnostic_status'] = self.translate_diagnostic_status
         kwargs['form'] = self.form
