@@ -8,81 +8,91 @@ msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-10 14:46+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-12-06 22:48+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris"
+"/foris-diagnostics-plugin/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnostikk"
 
 msgid "Modules"
-msgstr ""
+msgstr "Moduler"
 
 msgid "Missing"
-msgstr ""
+msgstr "Manglende"
 
 msgid "Preparing"
-msgstr ""
+msgstr "Forbereder"
 
 msgid "Ready"
-msgstr ""
+msgstr "Ferdig"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 #, python-format
 msgid "Unable to get diagnostic \"%s\"."
-msgstr ""
+msgstr "Klarte ikke å hente disgnostikk \"%s\"."
 
 #, python-format
 msgid "Diagnostic \"%s\" removed."
-msgstr ""
+msgstr "Diagnostikk \"%s\" fjernet."
 
 #, python-format
 msgid "Unable to remove diagnostic \"%s\"."
-msgstr ""
+msgstr "Klarte ikke å fjerne diagnostikk \"%s\"."
 
 #, python-format
 msgid "Diagnostic \"%s\" is being prepared."
-msgstr ""
+msgstr "Diagnostikk \"%s\" forberedes."
 
 msgid "Failed to generate diagnostic."
-msgstr ""
+msgstr "Klarte ikke å opprette diagnostikk."
 
+#, fuzzy
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
 "debug some problems related to the router's functionality. "
 msgstr ""
+"Denne siden er myntet på opprettelse av diagnostikk som er nyttig i "
+"feilrettingsøyemed, relatert til ruterens funksjonalitet. "
 
 msgid "Hint"
-msgstr ""
+msgstr "Hint"
 
 msgid "Generate"
-msgstr ""
+msgstr "Opprett"
 
+#, fuzzy
 msgid "List"
-msgstr ""
+msgstr "Liste"
 
 msgid ""
 "Some of the diagnostics might contain a sensitive data so make sure to "
 "remove it before sharing."
 msgstr ""
+"Noe av diagnostikken kan inneholde sensitiv data, så forsikre deg om at du "
+"fjerner slikt før du deler den."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "status"
-msgstr ""
+msgstr "status"
 
 msgid "Download"
-msgstr ""
+msgstr "Last ned"
 
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 msgid "Note that this list is not presistent and will be removed after reboot."
 msgstr ""
+"Merk at denne listen ikke er vedvarende og vil bli fjernet etter en omstart."
