@@ -8,81 +8,91 @@ msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-10 14:46+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-12-08 20:43+0000\n"
+"Last-Translator: Zoli <boritek@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnosztika"
 
 msgid "Modules"
-msgstr ""
+msgstr "Modulok"
 
 msgid "Missing"
-msgstr ""
+msgstr "Hiányzik"
 
 msgid "Preparing"
-msgstr ""
+msgstr "Előkészítés"
 
 msgid "Ready"
-msgstr ""
+msgstr "Kész"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #, python-format
 msgid "Unable to get diagnostic \"%s\"."
-msgstr ""
+msgstr "Nem lehet lekérni a(z) %s diagnosztikát."
 
 #, python-format
 msgid "Diagnostic \"%s\" removed."
-msgstr ""
+msgstr "%s diagnosztika eltávolítva."
 
 #, python-format
 msgid "Unable to remove diagnostic \"%s\"."
-msgstr ""
+msgstr "Nem lehet a(z) %s diagnosztikát eltávolítani."
 
 #, python-format
 msgid "Diagnostic \"%s\" is being prepared."
-msgstr ""
+msgstr "\"%s\" diagnosztika készül."
 
 msgid "Failed to generate diagnostic."
-msgstr ""
+msgstr "Nem sikerült létrehozni a diagnosztikát."
 
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
 "debug some problems related to the router's functionality. "
 msgstr ""
+"Ez az oldal arra van szentelve, hogy diagnosztikákat készítsen, amely "
+"hasznos lehet a számunkra, hogy a router működőképességével kapcsolatos "
+"bizonyos hibákat megtaláljuk. "
 
 msgid "Hint"
-msgstr ""
+msgstr "Tipp"
 
 msgid "Generate"
-msgstr ""
+msgstr "Létrehozás"
 
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 msgid ""
 "Some of the diagnostics might contain a sensitive data so make sure to "
 "remove it before sharing."
 msgstr ""
+"Néhány diagnosztika érzékeny adatokat tartalmazhat, ezért győződjön meg "
+"arról, hogy megosztás előtt eltávolította őket."
 
 msgid "ID"
-msgstr ""
+msgstr "Azonosító"
 
 msgid "status"
-msgstr ""
+msgstr "állapot"
 
 msgid "Download"
-msgstr ""
+msgstr "Letöltés"
 
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 msgid "Note that this list is not presistent and will be removed after reboot."
 msgstr ""
+"Figyeljünk arra, hogy ez a lista nem kerül megjegyzésre, újraindítás után "
+"elveszik."
