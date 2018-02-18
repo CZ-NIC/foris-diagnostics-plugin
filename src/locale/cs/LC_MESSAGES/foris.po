@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:16+0100\n"
-"PO-Revision-Date: 2017-03-10 15:30+0000\n"
-"Last-Translator: Stepan Henek <stepan+github@henek.name>\n"
+"PO-Revision-Date: 2018-02-19 13:35+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/turris/foris-"
 "diagnostics-plugin/cs/>\n"
 "Language: cs\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.19\n"
 
 msgid "Diagnostics"
 msgstr "Diagnostiky"
@@ -42,45 +42,45 @@ msgid "Missing"
 msgstr "Chybí"
 
 msgid "Preparing"
-msgstr "Se připravuje"
+msgstr "Připravuje se"
 
 msgid "Ready"
-msgstr "Připraven"
+msgstr "Připraveno"
 
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr "Neznámé"
 
 #, python-format
 msgid "Unable to get diagnostic \"%s\"."
-msgstr "Nemůžu stáhnout diagnostiku \"%s\"."
+msgstr "Nedaří se získat diagnostiku „%s“."
 
 #, python-format
 msgid "Diagnostic \"%s\" removed."
-msgstr "Diagnostika \"%s\" byla odstraněna."
+msgstr "Diagnostika „%s“ byla odstraněna."
 
 #, python-format
 msgid "Unable to remove diagnostic \"%s\"."
-msgstr "Nemůžu odstranit diagnostiku \"%s\"."
+msgstr "Nedaří se odstranit diagnostiku „%s“."
 
 #, python-format
 msgid "Diagnostic \"%s\" is being prepared."
-msgstr "Diagnostika \"%s\" se připravuje."
+msgstr "Diagnostika „%s“ se připravuje."
 
 msgid "Failed to generate diagnostic."
-msgstr "Generování diagnostiky selhalo."
+msgstr "Vytvoření diagnostiky se nezdařilo."
 
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
 "debug some problems related to the router's functionality. "
 msgstr ""
 "Tato stránka slouží pro vytváření diagnostických výstupů, které nám pomohou "
-"ladit problémy, které můžou s routerem nastat. "
+"ladit problémy, které mohou se směrovačem nastat. "
 
 msgid "Hint"
 msgstr "Nápověda"
 
 msgid "Generate"
-msgstr "Generuj"
+msgstr "Vytvořit"
 
 msgid "List"
 msgstr "Seznam"
@@ -89,21 +89,21 @@ msgid ""
 "Some of the diagnostics might contain a sensitive data so make sure to "
 "remove it before sharing."
 msgstr ""
-"Některé z těcho diagnostik mohou obsahovat citlivé údaje. Ujistěte se "
-"prosím, že jste tyto údaje odstranili dřiv, než budete data z diagnostik "
+"Některé z těchto diagnostik mohou obsahovat citlivé údaje. Ujistěte se "
+"prosím, že jste tyto údaje odstranili dříve, než budete data z diagnostik "
 "poskytovat dalším osobám."
 
 msgid "ID"
-msgstr "ID"
+msgstr "Identifikátor"
 
 msgid "status"
-msgstr "status"
+msgstr "stav"
 
 msgid "Download"
-msgstr "Stáhni"
+msgstr "Stáhnout"
 
 msgid "Remove"
-msgstr "Odstraň"
+msgstr "Odstranit"
 
 msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr "Tento seznam není perzistentní a po restartu bude odstraněn."
+msgstr "Tento seznam není trvalý a po restartu bude odstraněn."
