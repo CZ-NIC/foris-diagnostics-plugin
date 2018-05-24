@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Foris Diagnostics plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris Diagnostics plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Diagnostics"
+msgstr ""
+
+msgid "Modules"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Preparing"
+msgstr ""
+
+msgid "Ready"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+#, python-format
+msgid "Unable to get diagnostic \"%s\"."
+msgstr ""
+
+#, python-format
+msgid "Diagnostic \"%s\" removed."
+msgstr ""
+
+#, python-format
+msgid "Unable to remove diagnostic \"%s\"."
+msgstr ""
+
+#, python-format
+msgid "Diagnostic \"%s\" is being prepared."
+msgstr ""
+
+msgid "Failed to generate diagnostic."
+msgstr ""
+
+msgid ""
+"This page is dedicated to create diagnotics which can be useful to us to "
+"debug some problems related to the router's functionality. "
+msgstr ""
+
+msgid "Hint"
+msgstr ""
+
+msgid "Generate"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "status"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Note that this list is not presistent and will be removed after reboot."
+msgstr ""
