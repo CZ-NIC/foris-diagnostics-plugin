@@ -88,6 +88,6 @@
         </tbody>
     </table>
     <br />
-    <p>{{ trans("Note that this list is not presistent and will be removed after reboot.") }}</p>
+    <p>{{ trans("Note that this list is not persistent and will be removed after reboot.") }}</p>
     %end
 </div>
