@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-04-11 11:20+0000\n"
 "Last-Translator: NoR nIc <nora.cznic@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/turris/foris-"
@@ -19,11 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.13-dev\n"
 
-msgid "Diagnostics"
-msgstr "Diagnostik"
-
 msgid "Modules"
 msgstr "Module"
+
+msgid "Hint"
+msgstr "Hilfe"
+
+msgid "Generate"
+msgstr "Generieren"
+
+msgid "List"
+msgstr "Liste"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Einige der Diagnostikdaten können eine sensible Daten enthalten, stellen Sie "
+"sicher, dass Sie diese vor dem Freigeben entfernen."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "Status"
+
+msgid "Download"
+msgstr "Herunterladen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Beachten Sie, dass diese Liste nicht persistent ist und nach einem Neustart "
+"entfernt wird."
+
+msgid "Diagnostics"
+msgstr "Diagnostik"
 
 msgid "Missing"
 msgstr "Fehlende"
@@ -63,36 +97,3 @@ msgstr ""
 "Diese Seite ist dazu gedacht, eine Diagnostikdatei zu erstellen, die für uns "
 "nützlich sein kann, um einige Probleme im Zusammenhang mit der "
 "Funktionalität des Routers zu debuggen. "
-
-msgid "Hint"
-msgstr "Hilfe"
-
-msgid "Generate"
-msgstr "Generieren"
-
-msgid "List"
-msgstr "Liste"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Einige der Diagnostikdaten können eine sensible Daten enthalten, stellen Sie "
-"sicher, dass Sie diese vor dem Freigeben entfernen."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "Status"
-
-msgid "Download"
-msgstr "Herunterladen"
-
-msgid "Remove"
-msgstr "Entfernen"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr ""
-"Beachten Sie, dass diese Liste nicht persistent ist und nach einem Neustart "
-"entfernt wird."

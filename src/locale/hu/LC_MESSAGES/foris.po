@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-12-08 20:43+0000\n"
 "Last-Translator: Zoli <boritek@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/foris-"
@@ -19,11 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18-dev\n"
 
-msgid "Diagnostics"
-msgstr "Diagnosztika"
-
 msgid "Modules"
 msgstr "Modulok"
+
+msgid "Hint"
+msgstr "Tipp"
+
+msgid "Generate"
+msgstr "Létrehozás"
+
+msgid "List"
+msgstr "Lista"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Néhány diagnosztika érzékeny adatokat tartalmazhat, ezért győződjön meg "
+"arról, hogy megosztás előtt eltávolította őket."
+
+msgid "ID"
+msgstr "Azonosító"
+
+msgid "status"
+msgstr "állapot"
+
+msgid "Download"
+msgstr "Letöltés"
+
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Figyeljünk arra, hogy ez a lista nem kerül megjegyzésre, újraindítás után "
+"elveszik."
+
+msgid "Diagnostics"
+msgstr "Diagnosztika"
 
 msgid "Missing"
 msgstr "Hiányzik"
@@ -63,36 +97,3 @@ msgstr ""
 "Ez az oldal arra van szentelve, hogy diagnosztikákat készítsen, amely "
 "hasznos lehet a számunkra, hogy a router működőképességével kapcsolatos "
 "bizonyos hibákat megtaláljuk. "
-
-msgid "Hint"
-msgstr "Tipp"
-
-msgid "Generate"
-msgstr "Létrehozás"
-
-msgid "List"
-msgstr "Lista"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Néhány diagnosztika érzékeny adatokat tartalmazhat, ezért győződjön meg "
-"arról, hogy megosztás előtt eltávolította őket."
-
-msgid "ID"
-msgstr "Azonosító"
-
-msgid "status"
-msgstr "állapot"
-
-msgid "Download"
-msgstr "Letöltés"
-
-msgid "Remove"
-msgstr "Eltávolítás"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr ""
-"Figyeljünk arra, hogy ez a lista nem kerül megjegyzésre, újraindítás után "
-"elveszik."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Diagnostics"
+msgid "Modules"
 msgstr ""
 
-msgid "Modules"
+msgid "Hint"
+msgstr ""
+
+msgid "Generate"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "status"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+
+msgid "Diagnostics"
 msgstr ""
 
 msgid "Missing"
@@ -57,33 +86,4 @@ msgstr ""
 msgid ""
 "This page is dedicated to create diagnotics which can be useful to us to "
 "debug some problems related to the router's functionality. "
-msgstr ""
-
-msgid "Hint"
-msgstr ""
-
-msgid "Generate"
-msgstr ""
-
-msgid "List"
-msgstr ""
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-
-msgid "ID"
-msgstr ""
-
-msgid "status"
-msgstr ""
-
-msgid "Download"
-msgstr ""
-
-msgid "Remove"
-msgstr ""
-
-msgid "Note that this list is not presistent and will be removed after reboot."
 msgstr ""

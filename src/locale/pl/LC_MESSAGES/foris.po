@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-02 13:16+0100\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-03-31 20:13+0000\n"
 "Last-Translator: Krzysztof Kulesza <github@cmza.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/turris/foris-"
@@ -20,11 +20,45 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.13-dev\n"
 
-msgid "Diagnostics"
-msgstr "Diagnostyka"
-
 msgid "Modules"
 msgstr "Moduły"
+
+msgid "Hint"
+msgstr "Wskazówka"
+
+msgid "Generate"
+msgstr "Generuj"
+
+msgid "List"
+msgstr "Lista"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Część diagnostyki może zawierać poufne dane, dlatego przed udostępnieniem "
+"należy je usunąć."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "status"
+
+msgid "Download"
+msgstr "Pobierz"
+
+msgid "Remove"
+msgstr "Usuń"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Proszę pamiętać, że ta lista nie jest trwała i zostanie usunięta po "
+"restarcie."
+
+msgid "Diagnostics"
+msgstr "Diagnostyka"
 
 msgid "Missing"
 msgstr "Brakujący"
@@ -63,36 +97,3 @@ msgid ""
 msgstr ""
 "Ta strona jest przeznaczona do tworzenia diagnostyki, która może nam pomóc w "
 "debugowaniu niektórych problemów związanych z funkcjonalnością routera. "
-
-msgid "Hint"
-msgstr "Wskazówka"
-
-msgid "Generate"
-msgstr "Generuj"
-
-msgid "List"
-msgstr "Lista"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Część diagnostyki może zawierać poufne dane, dlatego przed udostępnieniem "
-"należy je usunąć."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "status"
-
-msgid "Download"
-msgstr "Pobierz"
-
-msgid "Remove"
-msgstr "Usuń"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr ""
-"Proszę pamiętać, że ta lista nie jest trwała i zostanie usunięta po "
-"restarcie."

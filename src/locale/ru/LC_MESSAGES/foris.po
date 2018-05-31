@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-02 13:16+0100\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-05-24 06:04+0000\n"
 "Last-Translator: Anton Shestakov <av6@dwimlabs.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/turris/foris-"
@@ -16,15 +16,50 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.14.1-dev\n"
-
-msgid "Diagnostics"
-msgstr "Диагностика"
 
 msgid "Modules"
 msgstr "Модули"
+
+msgid "Hint"
+msgstr "Подсказка"
+
+msgid "Generate"
+msgstr "Создать"
+
+msgid "List"
+msgstr "Список"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Некоторые из диагностических данных могут содержать конфиденциальную "
+"информацию, поэтому перед их совместным использованием обязательно удалите "
+"её."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "статус"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "Remove"
+msgstr "Удалить"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Обратите внимание, что этот список не является постоянным и будет удалён "
+"после перезагрузки."
+
+msgid "Diagnostics"
+msgstr "Диагностика"
 
 msgid "Missing"
 msgstr "Отсутствует"
@@ -63,37 +98,3 @@ msgid ""
 msgstr ""
 "Эта страница посвящена созданию диагностики, которая может быть полезна нам "
 "для отладки некоторых проблем, связанных с функциональностью маршрутизатора. "
-
-msgid "Hint"
-msgstr "Подсказка"
-
-msgid "Generate"
-msgstr "Создать"
-
-msgid "List"
-msgstr "Список"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Некоторые из диагностических данных могут содержать конфиденциальную "
-"информацию, поэтому перед их совместным использованием обязательно удалите "
-"её."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "статус"
-
-msgid "Download"
-msgstr "Скачать"
-
-msgid "Remove"
-msgstr "Удалить"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr ""
-"Обратите внимание, что этот список не является постоянным и будет удалён "
-"после перезагрузки."

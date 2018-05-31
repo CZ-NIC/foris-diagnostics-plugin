@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-02 13:16+0100\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-03-09 09:38+0000\n"
 "Last-Translator: Vladimír Záhradník <vladimir.zahradnik@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/turris/foris-"
@@ -32,11 +32,44 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12\n"
 
-msgid "Diagnostics"
-msgstr "Diagnostiky"
-
 msgid "Modules"
 msgstr "Moduly"
+
+msgid "Hint"
+msgstr "Pomocník"
+
+msgid "Generate"
+msgstr "Generovať"
+
+msgid "List"
+msgstr "Zoznam"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Niektoré z týchto diagnostík môžu obsahovať citlivé údaje. Uistite sa, "
+"prosím, že ste tieto údaje odstránili skôr, než budete dáta z diagnostík "
+"poskytovať ďalším osobám."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "stav"
+
+msgid "Download"
+msgstr "Prevziať"
+
+msgid "Remove"
+msgstr "Odstrániť"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr "Tento zoznam nie je perzistentný a po reštarte bude odstránený."
+
+msgid "Diagnostics"
+msgstr "Diagnostiky"
 
 msgid "Missing"
 msgstr "Chýba"
@@ -75,35 +108,3 @@ msgid ""
 msgstr ""
 "Táto stránka slúži na vytváranie diagnostických výstupov, ktoré nám pomôžu "
 "ladiť problémy, ktoré môžu s routerom nastať. "
-
-msgid "Hint"
-msgstr "Pomocník"
-
-msgid "Generate"
-msgstr "Generovať"
-
-msgid "List"
-msgstr "Zoznam"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Niektoré z týchto diagnostík môžu obsahovať citlivé údaje. Uistite sa, "
-"prosím, že ste tieto údaje odstránili skôr, než budete dáta z diagnostík "
-"poskytovať ďalším osobám."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "stav"
-
-msgid "Download"
-msgstr "Prevziať"
-
-msgid "Remove"
-msgstr "Odstrániť"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr "Tento zoznam nie je perzistentný a po reštarte bude odstránený."

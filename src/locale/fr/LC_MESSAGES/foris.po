@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"POT-Creation-Date: 2018-05-31 16:04+0200\n"
 "PO-Revision-Date: 2017-04-24 09:28+0000\n"
 "Last-Translator: Easylarveur <easylarveur@hotmail.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/turris/foris-"
@@ -19,11 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.14-dev\n"
 
-msgid "Diagnostics"
-msgstr "Diagnostics"
-
 msgid "Modules"
 msgstr "Modules"
+
+msgid "Hint"
+msgstr "Astuce"
+
+msgid "Generate"
+msgstr "Générer"
+
+msgid "List"
+msgstr "Liste"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Certains diagnostics peuvent contenir des données sensibles alors assurez-"
+"vous de les retirer avant de partager."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "statut"
+
+msgid "Download"
+msgstr "Télécharger"
+
+msgid "Remove"
+msgstr "Supprimer"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Veuillez noter que cette liste n'est pas persistante et sera supprimée après "
+"redémarrage."
+
+msgid "Diagnostics"
+msgstr "Diagnostics"
 
 msgid "Missing"
 msgstr "Manquant"
@@ -62,36 +96,3 @@ msgid ""
 msgstr ""
 "Cette page est dédiée à la création des diagnostics qui peuvent nous être "
 "utiles pour déboguer certains problèmes liés à la fonctionnalité du routeur. "
-
-msgid "Hint"
-msgstr "Astuce"
-
-msgid "Generate"
-msgstr "Générer"
-
-msgid "List"
-msgstr "Liste"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Certains diagnostics peuvent contenir des données sensibles alors assurez-"
-"vous de les retirer avant de partager."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "statut"
-
-msgid "Download"
-msgstr "Télécharger"
-
-msgid "Remove"
-msgstr "Supprimer"
-
-msgid "Note that this list is not presistent and will be removed after reboot."
-msgstr ""
-"Veuillez noter que cette liste n'est pas persistante et sera supprimée après "
-"redémarrage."
