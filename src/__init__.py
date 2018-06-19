@@ -30,7 +30,7 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
     def get_form(self):
         modules_form = fapi.ForisForm("modules", self.data)
         modules_section = modules_form.add_section(name="modules", title=_("Modules"))
-        data = current_state.backend.perform("diagnostics", "list_modules", {})
+        data = current_state.backend.perform("diagnostics", "list_modules")
         for module in data["modules"]:
             modules_section.add_field(
                 Checkbox, name="module_%s" % module, label=module, default=True,
@@ -70,7 +70,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             return
 
         try:
-            data = current_state.backend.perform("diagnostics", "list_diagnostics", {})
+            data = current_state.backend.perform("diagnostics", "list_diagnostics")
             diagnostics = [e for e in data["diagnostics"] if e["diag_id"] == diag_id]
             filename = '%s.txt.gz' % diag_id
             if len(diagnostics) != 1:
@@ -138,7 +138,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         kwargs['PLUGIN_NAME'] = DiagnosticsPlugin.PLUGIN_NAME
         kwargs['PLUGIN_STYLES'] = DiagnosticsPlugin.PLUGIN_STYLES
 
-        data = current_state.backend.perform("diagnostics", "list_diagnostics", {})
+        data = current_state.backend.perform("diagnostics", "list_diagnostics")
         kwargs['diagnostics'] = data["diagnostics"]
         kwargs['translate_diagnostic_status'] = self.translate_diagnostic_status
         kwargs['form'] = self.form
