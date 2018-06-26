@@ -41,7 +41,8 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
 
 class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
     menu_order = 90
-    template = "diagnostics/diagnostics.tpl"
+    template = "diagnostics/diagnostics"
+    template_type = "jinja2"
 
     DIAGNOSTIC_STATUS_TRANSLATION = {
         'missing': gettext("Missing"),
