@@ -11,7 +11,7 @@ class BuildCmd(build_py):
         # build foris plugin files
         from foris_plugins_distutils import build
         cmd = build(copy.copy(self.distribution))
-        cmd.finalize_options()
+        cmd.ensure_finalized()
         cmd.run()
 
         # build package
