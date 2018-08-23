@@ -77,7 +77,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             if len(diagnostics) != 1:
                 _error_redirect()
                 return
-            with open(diagnostics[0]["path"]) as f_in:
+            with open(diagnostics[0]["path"], "rb") as f_in:
                 buf = io.BytesIO()
                 f_out = gzip.GzipFile(filename=filename, mode="wb", fileobj=buf)
                 f_out.write(f_in.read())
