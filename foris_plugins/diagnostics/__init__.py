@@ -40,6 +40,7 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
 
 
 class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
+    slug = "diagnostics"
     menu_order = 90
     template = "diagnostics/diagnostics"
     template_type = "jinja2"
@@ -145,7 +146,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         kwargs['form'] = self.form
         kwargs['title'] = self.userfriendly_title
         kwargs['description'] = _(
-            "This page is dedicated to create diagnotics which can be useful to us to "
+            "This page is dedicated to create diagnostics which can be useful to us to "
             "debug some problems related to the router's functionality. "
         )
 
@@ -161,4 +162,4 @@ class DiagnosticsPlugin(ForisPlugin):
 
     def __init__(self, app):
         super(DiagnosticsPlugin, self).__init__(app)
-        add_config_page("diagnostics", DiagnosticsConfigPage, top_level=True)
+        add_config_page(DiagnosticsConfigPage)
