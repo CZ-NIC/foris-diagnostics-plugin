@@ -1,64 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 16:04+0200\n"
+"POT-Creation-Date: 2018-09-25 15:53+0200\n"
 "PO-Revision-Date: 2017-04-09 16:15+0000\n"
 "Last-Translator: Sergiu Cozma <lssjbrolli@gmail.com>\n"
-"Language-Team: Romanian <https://hosted.weblate.org/projects/turris/foris-"
-"diagnostics-plugin/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/turris"
+"/foris-diagnostics-plugin/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
-
-msgid "Modules"
-msgstr "Module"
-
-msgid "Hint"
-msgstr "Sugestie"
-
-msgid "Generate"
-msgstr "Genereaza"
-
-msgid "List"
-msgstr "Lista"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Cateva dintre diagnostice pot contine informatii sensibile, fiti siguri ca "
-"le-ati sters inainte de trimitere."
-
-msgid "ID"
-msgstr "ID"
-
-msgid "status"
-msgstr "status"
-
-msgid "Download"
-msgstr "Descarcare"
-
-msgid "Remove"
-msgstr "Sterge"
-
-#, fuzzy
-msgid "Note that this list is not persistent and will be removed after reboot."
-msgstr ""
-"Retineti ca aceasta lista nu este persistenta si va fi stearsa dupa "
-"repornire."
+"Generated-By: Babel 2.6.0\n"
 
 msgid "Diagnostics"
 msgstr "Diagnoze"
+
+msgid "Modules"
+msgstr "Module"
 
 msgid "Missing"
 msgstr "Lipsesc"
@@ -91,9 +57,46 @@ msgstr "Diagnosticul \"%s\" este in curs de pregatire."
 msgid "Failed to generate diagnostic."
 msgstr "Diagnosticul nu a fost generat."
 
+#, fuzzy
 msgid ""
-"This page is dedicated to create diagnotics which can be useful to us to "
-"debug some problems related to the router's functionality. "
+"This page is dedicated to create diagnostics which can be useful to us to"
+" debug some problems related to the router's functionality. "
 msgstr ""
 "Aceasta pagina este didicata crearii de diagnoze care pot fi folositoare "
-"pentru noi in rezolvarea unor probleme legate de functionarea router-ului. "
+"pentru noi in rezolvarea unor probleme legate de functionarea router-"
+"ului. "
+
+msgid "Hint"
+msgstr "Sugestie"
+
+msgid "Generate"
+msgstr "Genereaza"
+
+msgid "List"
+msgstr "Lista"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Cateva dintre diagnostice pot contine informatii sensibile, fiti siguri "
+"ca le-ati sters inainte de trimitere."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "status"
+msgstr "status"
+
+msgid "Download"
+msgstr "Descarcare"
+
+msgid "Remove"
+msgstr "Sterge"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Retineti ca aceasta lista nu este persistenta si va fi stearsa dupa "
+"repornire."
+

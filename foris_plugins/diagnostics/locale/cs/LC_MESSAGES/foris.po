@@ -5,70 +5,34 @@
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
 # Stepan Henek <stepan.henek@nic.cz>, 2017.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 16:04+0200\n"
+"POT-Creation-Date: 2018-09-25 15:53+0200\n"
 "PO-Revision-Date: 2018-06-02 04:36+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/turris/"
-"foris-diagnostics-plugin/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0\n"
-
-msgid "Modules"
-msgstr "Moduly"
-
-msgid "Hint"
-msgstr "Nápověda"
-
-msgid "Generate"
-msgstr "Vytvořit"
-
-msgid "List"
-msgstr "Seznam"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Některé z těchto diagnostik mohou obsahovat citlivé údaje. Ujistěte se "
-"prosím, že jste tyto údaje odstranili předtím, než budete data z diagnostik "
-"poskytovat dalším osobám."
-
-msgid "ID"
-msgstr "Identifikátor"
-
-msgid "status"
-msgstr "stav"
-
-msgid "Download"
-msgstr "Stáhnout"
-
-msgid "Remove"
-msgstr "Odstranit"
-
-msgid "Note that this list is not persistent and will be removed after reboot."
-msgstr "Tento seznam není trvalý a po restartu bude odstraněn."
+"Generated-By: Babel 2.6.0\n"
 
 msgid "Diagnostics"
 msgstr "Diagnostiky"
+
+msgid "Modules"
+msgstr "Moduly"
 
 msgid "Missing"
 msgstr "Chybí"
@@ -101,9 +65,43 @@ msgstr "Diagnostika „%s“ se připravuje."
 msgid "Failed to generate diagnostic."
 msgstr "Vytvoření diagnostiky se nezdařilo."
 
+#, fuzzy
 msgid ""
-"This page is dedicated to create diagnotics which can be useful to us to "
-"debug some problems related to the router's functionality. "
+"This page is dedicated to create diagnostics which can be useful to us to"
+" debug some problems related to the router's functionality. "
 msgstr ""
-"Tato stránka slouží pro vytváření diagnostických výstupů, které nám pomohou "
-"ladit problémy, které mohou se směrovačem nastat. "
+"Tato stránka slouží pro vytváření diagnostických výstupů, které nám "
+"pomohou ladit problémy, které mohou se směrovačem nastat. "
+
+msgid "Hint"
+msgstr "Nápověda"
+
+msgid "Generate"
+msgstr "Vytvořit"
+
+msgid "List"
+msgstr "Seznam"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Některé z těchto diagnostik mohou obsahovat citlivé údaje. Ujistěte se "
+"prosím, že jste tyto údaje odstranili předtím, než budete data z "
+"diagnostik poskytovat dalším osobám."
+
+msgid "ID"
+msgstr "Identifikátor"
+
+msgid "status"
+msgstr "stav"
+
+msgid "Download"
+msgstr "Stáhnout"
+
+msgid "Remove"
+msgstr "Odstranit"
+
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr "Tento seznam není trvalý a po restartu bude odstraněn."
+

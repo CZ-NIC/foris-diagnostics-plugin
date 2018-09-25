@@ -1,64 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 16:04+0200\n"
+"POT-Creation-Date: 2018-09-25 15:53+0200\n"
 "PO-Revision-Date: 2018-06-20 05:18+0000\n"
 "Last-Translator: Gleb <70b6efd8@opayq.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/turris/"
-"foris-diagnostics-plugin/ru/>\n"
 "Language: ru\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/turris/foris-"
+"diagnostics-plugin/ru/>\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0.1\n"
-
-msgid "Modules"
-msgstr "Модули"
-
-msgid "Hint"
-msgstr "Подсказка"
-
-msgid "Generate"
-msgstr "Создать"
-
-msgid "List"
-msgstr "Список"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Некоторые из диагностических данных могут содержать конфиденциальную "
-"информацию, поэтому перед их совместным использованием обязательно удалите "
-"её."
-
-msgid "ID"
-msgstr "Идентификатор"
-
-msgid "status"
-msgstr "статус"
-
-msgid "Download"
-msgstr "Скачать"
-
-msgid "Remove"
-msgstr "Удалить"
-
-msgid "Note that this list is not persistent and will be removed after reboot."
-msgstr ""
-"Обратите внимание, что этот список не постоянный и будет удалён после "
-"перезагрузки."
+"Generated-By: Babel 2.6.0\n"
 
 msgid "Diagnostics"
 msgstr "Диагностика"
+
+msgid "Modules"
+msgstr "Модули"
 
 msgid "Missing"
 msgstr "Отсутствует"
@@ -91,9 +57,46 @@ msgstr "Диагностика \"%s\" готовится."
 msgid "Failed to generate diagnostic."
 msgstr "Не удалось сгенерировать диагностику."
 
+#, fuzzy
 msgid ""
-"This page is dedicated to create diagnotics which can be useful to us to "
-"debug some problems related to the router's functionality. "
+"This page is dedicated to create diagnostics which can be useful to us to"
+" debug some problems related to the router's functionality. "
 msgstr ""
-"Эта страница посвящена созданию диагностики, которая может быть полезна нам "
-"для отладки некоторых проблем, связанных с функциональностью маршрутизатора. "
+"Эта страница посвящена созданию диагностики, которая может быть полезна "
+"нам для отладки некоторых проблем, связанных с функциональностью "
+"маршрутизатора. "
+
+msgid "Hint"
+msgstr "Подсказка"
+
+msgid "Generate"
+msgstr "Создать"
+
+msgid "List"
+msgstr "Список"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Некоторые из диагностических данных могут содержать конфиденциальную "
+"информацию, поэтому перед их совместным использованием обязательно "
+"удалите её."
+
+msgid "ID"
+msgstr "Идентификатор"
+
+msgid "status"
+msgstr "статус"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Обратите внимание, что этот список не постоянный и будет удалён после "
+"перезагрузки."
+

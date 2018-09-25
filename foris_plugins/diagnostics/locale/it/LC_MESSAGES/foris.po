@@ -1,62 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Foris Diagnostics plugin package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Foris Diagnostics
+# plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Foris Diagnostics plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 16:04+0200\n"
+"POT-Creation-Date: 2018-09-25 15:53+0200\n"
 "PO-Revision-Date: 2018-04-23 09:27+0000\n"
 "Last-Translator: Roberto Zilli <zetaerre@gmail.com>\n"
+"Language: it\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/turris/foris-"
 "diagnostics-plugin/it/>\n"
-"Language: it\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0-dev\n"
-
-msgid "Modules"
-msgstr "Moduli"
-
-msgid "Hint"
-msgstr "Suggerimento"
-
-msgid "Generate"
-msgstr "Generare"
-
-msgid "List"
-msgstr "Lista"
-
-msgid ""
-"Some of the diagnostics might contain a sensitive data so make sure to "
-"remove it before sharing."
-msgstr ""
-"Alcune delle diagnostiche potrebbero contenere dati sensibili, quindi "
-"assicurati di rimuoverli prima di condividerli."
-
-msgid "ID"
-msgstr "Identificativo"
-
-msgid "status"
-msgstr "stato"
-
-msgid "Download"
-msgstr "Scaricare"
-
-msgid "Remove"
-msgstr "Rimuovere"
-
-#, fuzzy
-msgid "Note that this list is not persistent and will be removed after reboot."
-msgstr ""
-"Si noti che questa lista non è persistente e verrà rimossa dopo il riavvio."
+"Generated-By: Babel 2.6.0\n"
 
 msgid "Diagnostics"
 msgstr "Diagnostica"
+
+msgid "Modules"
+msgstr "Moduli"
 
 msgid "Missing"
 msgstr "Mancante"
@@ -89,10 +57,46 @@ msgstr "E' in corso la preparazione della diagnostica \"%s\"."
 msgid "Failed to generate diagnostic."
 msgstr "Impossibile generare la diagnostica."
 
+#, fuzzy
 msgid ""
-"This page is dedicated to create diagnotics which can be useful to us to "
-"debug some problems related to the router's functionality. "
+"This page is dedicated to create diagnostics which can be useful to us to"
+" debug some problems related to the router's functionality. "
 msgstr ""
-"Questa pagina è dedicata alla creazione di diagnostica che può essere utile "
-"per eseguire il debug di alcuni problemi relativi alle funzionalità del "
-"router. "
+"Questa pagina è dedicata alla creazione di diagnostica che può essere "
+"utile per eseguire il debug di alcuni problemi relativi alle funzionalità"
+" del router. "
+
+msgid "Hint"
+msgstr "Suggerimento"
+
+msgid "Generate"
+msgstr "Generare"
+
+msgid "List"
+msgstr "Lista"
+
+msgid ""
+"Some of the diagnostics might contain a sensitive data so make sure to "
+"remove it before sharing."
+msgstr ""
+"Alcune delle diagnostiche potrebbero contenere dati sensibili, quindi "
+"assicurati di rimuoverli prima di condividerli."
+
+msgid "ID"
+msgstr "Identificativo"
+
+msgid "status"
+msgstr "stato"
+
+msgid "Download"
+msgstr "Scaricare"
+
+msgid "Remove"
+msgstr "Rimuovere"
+
+#, fuzzy
+msgid "Note that this list is not persistent and will be removed after reboot."
+msgstr ""
+"Si noti che questa lista non è persistente e verrà rimossa dopo il "
+"riavvio."
+
