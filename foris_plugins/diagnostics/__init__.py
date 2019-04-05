@@ -6,6 +6,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import bottle
+import importlib
 import io
 import os
 import re
@@ -16,12 +17,35 @@ from foris import fapi
 from foris.utils.translators import gettext_dummy as gettext, gettext as _
 from foris.config import ConfigPageMixin, add_config_page
 from foris.config_handlers import BaseConfigHandler
-from foris.form import Checkbox
+from foris.form import Checkbox, Textbox
 from foris.plugins import ForisPlugin
 from foris.utils import messages
 from foris.utils.routing import reverse
 
 from foris.state import current_state
+
+sentry_working = True if importlib.util.find_spec("sentry_sdk") else False
+
+
+class SentryConfigHandler(BaseConfigHandler):
+    def get_form(self):
+        data = current_state.backend.perform("diagnostics", "get_sentry")
+        if self.data:
+            # update from post
+            data.update(self.data)
+
+        sentry_form = fapi.ForisForm("sentry", data)
+        main = sentry_form.add_section(name="sentry_section", title=_("Sentry configuration"))
+        main.add_field(Textbox, name="dsn", label=_("Private DSN"), default="")
+
+        def form_callback(data):
+            res = current_state.backend.perform(
+                "diagnostics", "set_sentry", {"dsn": data.get("dsn", "")}
+            )
+            return "save_result", res  # store {"result": ...} to be used later...
+
+        sentry_form.add_callback(form_callback)
+        return sentry_form
 
 
 class DiagnosticsConfigHandler(BaseConfigHandler):
@@ -33,7 +57,7 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
         data = current_state.backend.perform("diagnostics", "list_modules")
         for module in data["modules"]:
             modules_section.add_field(
-                Checkbox, name="module_%s" % module, label=module, default=True,
+                Checkbox, name="module_%s" % module, label=module, default=True
             )
 
         return modules_form
@@ -46,35 +70,36 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
     template_type = "jinja2"
 
     DIAGNOSTIC_STATUS_TRANSLATION = {
-        'missing': gettext("Missing"),
-        'preparing': gettext("Preparing"),
-        'ready': gettext("Ready"),
-        'unknown': gettext("Unknown"),
+        "missing": gettext("Missing"),
+        "preparing": gettext("Preparing"),
+        "ready": gettext("Ready"),
+        "unknown": gettext("Unknown"),
     }
 
     @staticmethod
     def translate_diagnostic_status(status):
-        res = _(DiagnosticsConfigPage.DIAGNOSTIC_STATUS_TRANSLATION.get(
-            status,
-            DiagnosticsConfigPage.DIAGNOSTIC_STATUS_TRANSLATION['unknown'],
-        ))
+        res = _(
+            DiagnosticsConfigPage.DIAGNOSTIC_STATUS_TRANSLATION.get(
+                status, DiagnosticsConfigPage.DIAGNOSTIC_STATUS_TRANSLATION["unknown"]
+            )
+        )
         return res
 
     def _action_download_diagnostic(self):
         diag_id = bottle.request.POST.get("id")
 
         def _error_redirect():
-            messages.error(_("Unable to get diagnostic \"%s\".") % diag_id)
+            messages.error(_('Unable to get diagnostic "%s".') % diag_id)
             bottle.redirect(reverse("config_page", page_name="diagnostics"))
 
-        if not re.match(r'^[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-zA-Z0-9]{8}$', diag_id):
+        if not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-zA-Z0-9]{8}$", diag_id):
             _error_redirect()
             return
 
         try:
             data = current_state.backend.perform("diagnostics", "list_diagnostics")
             diagnostics = [e for e in data["diagnostics"] if e["diag_id"] == diag_id]
-            filename = '%s.txt.gz' % diag_id
+            filename = "%s.txt.gz" % diag_id
             if len(diagnostics) != 1:
                 _error_redirect()
                 return
@@ -91,8 +116,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             return
 
         bottle.response.set_header("Content-Type", "text/plain")
-        bottle.response.set_header(
-            "Content-Disposition", 'attachment; filename="%s"' % filename)
+        bottle.response.set_header("Content-Disposition", 'attachment; filename="%s"' % filename)
         bottle.response.set_header("Content-Length", len(output))
         return output
 
@@ -100,31 +124,39 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
         diag_id = bottle.request.POST.get("id")
 
         data = current_state.backend.perform(
-            "diagnostics", "remove_diagnostic", {"diag_id": diag_id})
+            "diagnostics", "remove_diagnostic", {"diag_id": diag_id}
+        )
         if data["result"]:
-            messages.success(_("Diagnostic \"%s\" removed.") % diag_id)
+            messages.success(_('Diagnostic "%s" removed.') % diag_id)
         else:
-            messages.error(_("Unable to remove diagnostic \"%s\".") % diag_id)
+            messages.error(_('Unable to remove diagnostic "%s".') % diag_id)
 
         bottle.redirect(reverse("config_page", page_name="diagnostics"))
 
     def _action_prepare_diagnostic(self):
         modules = [
-            k.replace("module_", "", 1) for k, v in bottle.request.POST.allitems()
+            k.replace("module_", "", 1)
+            for k, v in bottle.request.POST.allitems()
             if v == "1" and k.startswith("module_")
         ]
 
         data = current_state.backend.perform(
-            "diagnostics", "prepare_diagnostic", {"modules": modules})
+            "diagnostics", "prepare_diagnostic", {"modules": modules}
+        )
         if "diag_id" in data:
-            messages.success(_("Diagnostic \"%s\" is being prepared.") % data["diag_id"])
+            messages.success(_('Diagnostic "%s" is being prepared.') % data["diag_id"])
         else:
             messages.error(_("Failed to generate diagnostic."))
 
         bottle.redirect(reverse("config_page", page_name="diagnostics"))
 
+    def _set_sentry(self):
+        form = SentryConfigHandler(bottle.request.POST.decode()).get_form()
+        form.save()
+        bottle.redirect(reverse("config_page", page_name="diagnostics"))
+
     def call_action(self, action):
-        if bottle.request.method != 'POST':
+        if bottle.request.method != "POST":
             # all actions here require POST
             messages.error("Wrong HTTP method.")
             bottle.redirect(reverse("config_page", page_name="diagnostics"))
@@ -134,18 +166,22 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             return self._action_remove_diagnostic()
         elif action == "prepare":
             return self._action_prepare_diagnostic()
+        elif action == "set_sentry":
+            return self._set_sentry()
         raise bottle.HTTPError(404, "Unknown action.")
 
     def render(self, **kwargs):
-        kwargs['PLUGIN_NAME'] = DiagnosticsPlugin.PLUGIN_NAME
-        kwargs['PLUGIN_STYLES'] = DiagnosticsPlugin.PLUGIN_STYLES
+        kwargs["PLUGIN_NAME"] = DiagnosticsPlugin.PLUGIN_NAME
+        kwargs["PLUGIN_STYLES"] = DiagnosticsPlugin.PLUGIN_STYLES
 
         data = current_state.backend.perform("diagnostics", "list_diagnostics")
-        kwargs['diagnostics'] = data["diagnostics"]
-        kwargs['translate_diagnostic_status'] = self.translate_diagnostic_status
-        kwargs['form'] = self.form
-        kwargs['title'] = self.userfriendly_title
-        kwargs['description'] = _(
+        kwargs["diagnostics"] = data["diagnostics"]
+        kwargs["translate_diagnostic_status"] = self.translate_diagnostic_status
+        kwargs["form"] = self.form
+        kwargs["sentry_form"] = SentryConfigHandler().get_form()
+        kwargs["sentry_working"] = sentry_working
+        kwargs["title"] = self.userfriendly_title
+        kwargs["description"] = _(
             "This page is dedicated to create diagnostics which can be useful to us to "
             "debug some problems related to the router's functionality. "
         )
@@ -156,9 +192,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
 class DiagnosticsPlugin(ForisPlugin):
     PLUGIN_NAME = "diagnostics"
     DIRNAME = os.path.dirname(os.path.abspath(__file__))
-    PLUGIN_STYLES = [
-        "css/diagnostics.css",
-    ]
+    PLUGIN_STYLES = ["css/diagnostics.css"]
 
     def __init__(self, app):
         super(DiagnosticsPlugin, self).__init__(app)
