@@ -57,7 +57,8 @@ class DiagnosticsConfigHandler(BaseConfigHandler):
         data = current_state.backend.perform("diagnostics", "list_modules")
         for module in data["modules"]:
             modules_section.add_field(
-                Checkbox, name="module_%s" % module, label=module, default=True
+                Checkbox, name="module_%s" % module["module_id"], label=module["module_id"],
+                default=True, hint=module["description"],
             )
 
         return modules_form
