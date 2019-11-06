@@ -20,7 +20,7 @@ class BuildCmd(build_py):
 
 setup(
     name="Foris Diagnostics Plugin",
-    version="12",
+    version="12.1",
     description="Diagnostics plugin for foris web interfce",
     author="CZ.NIC, z. s. p. o.",
     author_email="stepan.henek@nic.cz",
