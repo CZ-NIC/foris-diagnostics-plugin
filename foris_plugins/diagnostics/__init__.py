@@ -93,7 +93,7 @@ class DiagnosticsConfigPage(ConfigPageMixin, DiagnosticsConfigHandler):
             messages.error(_('Unable to get diagnostic "%s".') % diag_id)
             bottle.redirect(reverse("config_page", page_name="diagnostics"))
 
-        if not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-zA-Z0-9]{8}$", diag_id):
+        if not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}_[a-zA-Z0-9]{8}$", diag_id):
             _error_redirect()
             return
 
