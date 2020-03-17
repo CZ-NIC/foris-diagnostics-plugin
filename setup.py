@@ -20,12 +20,12 @@ class BuildCmd(build_py):
 
 setup(
     name="Foris Diagnostics Plugin",
-    version="12.1",
+    version="12.2",
     description="Diagnostics plugin for foris web interfce",
     author="CZ.NIC, z. s. p. o.",
-    author_email="stepan.henek@nic.cz",
+    author_email="packaging@turris.cz",
     url="https://gitlab.labs.nic.cz/turris/foris/foris-diagnostics-plugin/",
-    license="GPL-3.0",
+    license="GPL-3.0-only",
     install_requires=[
         "foris @ git+https://gitlab.labs.nic.cz/turris/foris/foris.git#egg=foris",
     ],
